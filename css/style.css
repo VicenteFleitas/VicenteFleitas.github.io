@@ -1,0 +1,28 @@
+#cajaformulario
+{
+	background: rgba(0, 150, 0, .2);
+	float:left;
+	padding: 20px;
+	border: 1px solid #999999;
+	border-radius: 5px;
+}
+#cajadatos
+{
+	background:rgba(0,0,150,.2);
+	float: left;
+	width: 400px;
+	margin-left: 20px;
+	padding: 20px;
+	border: 1px solid #999999;
+	border-radius: 5px;
+}
+
+#clave, #texto
+{
+	width: 200px;
+}
+#cajadatos > div
+{
+	padding: 5px;
+	border-bottom: 1px solid #999999;
+}
