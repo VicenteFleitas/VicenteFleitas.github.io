@@ -92,6 +92,15 @@ untangleGame.loadImages = function()
 		console.log("Error loading the image.");
 	}
 	untangleGame.background.src = "images/board.png";
+	//load the guide sprite image
+	untangleGame.guide = new Image();
+	untangleGame.guide.onload = function()
+	{
+		//setup timer to switch the display frame of the guide sprite
+		untangleGame.guideFrame = 0;
+		setInterval(untangleGame.guideNextFrame, 500);
+	}
+	untangleGame.guide.src = "images/guide_sprite.png";
 }
 
 untangleGame.drawBackground = function()
@@ -99,3 +108,25 @@ untangleGame.drawBackground = function()
 	// draw the image background
 	untangleGame.ctx.drawImage(untangleGame.background, 0, 0);
 }
+
+untangleGame.guideNextFrame = function()
+{
+	untangleGame.guideFrame++;
+	//there are only 6 frames (0-5) in the guide animation.
+	//we loop back the frame number to frame 0 after frame 5.
+	if(untangleGame.guideFrame > 5)
+	{
+		untangleGame.guideFrame = 0;
+	}
+}
+untangleGame.drawGuide = function()
+{
+	var ctx = untangleGame.ctx;
+	//draw guide animation
+	if(untangleGame.currentLevel === 0)
+	{
+		//the dimension of each frame is 80x130.
+		var nextFrameX = untangleGame.guideFrame*80;
+		ctx.drawImage(untangleGame.guide, nextFrameX, 0, 80, 130, 325, 130, 80, 130);
+	}
+};

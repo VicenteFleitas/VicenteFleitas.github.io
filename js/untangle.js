@@ -31,6 +31,7 @@ $(document).ready(function()
 		untangleGame.drawAllLines();
 		untangleGame.drawAllCircles();
 		untangleGame.drawLevelProgress();
+		untangleGame.drawGuide();
 	}
 
 
