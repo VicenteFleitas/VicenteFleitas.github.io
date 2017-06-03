@@ -1,22 +1,28 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 	<meta charset="utf-8">
-	<meta name="description" content="Crear archivos y o carpetas.">
-	<meta name="keywords" content="files, create">
-	<title>Creando archivos</title>
-	<link rel="stylesheet" href="css/style.css">
-	<script src="js/Main.js"></script>
+	<title>Drawing circles in canvas</title>
+	<link rel="stylesheet" href="css/untangle.css">
 </head>
 <body>
-<section id="cajaformulario">
-	<form id="formulario">
-		<p>Nombre:<br><input type="text" name="entrada" id="entrada" required></p>
-		<p><input type="button" name="boton" id="boton" value="Aceptar"></p>
-	</form>
+<section id="page">
+	<header>
+		<h1>Drawing lines in canvas</h1>
+	</header>
+	<canvas id="game" width="768" height="400"></canvas>
+	<p>Puzzle <span id="level">0</span>, Completeness: <span id="progress">0</span>%</p>
+	<footer>
+		<p>This is an interactive game with circles and lines connecting them.</p>
+	</footer>
 </section>
-<section id="cajadatos">
-	No hay entradas disponibles
-</section>
+	
+	<script src="js/jquery-3.2.1.min.js"></script>
+	<script src="js/untangle.data.js"></script>
+	<script src="js/untangle.drawing.js"></script>
+	<script src="js/untangle.input.js"></script>
+	<script src="js/untangle.levels.js"></script>
+	<script src="js/untangle.game.js"></script>
+	<script src="js/untangle.js"></script>
 </body>
 </html>
