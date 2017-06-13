@@ -30,7 +30,7 @@ $(function()
 	if(window["WebSocket"])
 	{
 		//create connection
-		websocketGame.socket = new WebSocket("https://calm-temple-45439.herokuapp.com:8000");
+		websocketGame.socket = new WebSocket("ws://calm-temple-45439.herokuapp.com:8000");
 		//on open event
 		websocketGame.socket.onopen = function(e)
 		{
