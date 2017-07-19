@@ -918,7 +918,7 @@ $hxClasses["ApplicationMain"] = ApplicationMain;
 ApplicationMain.__name__ = ["ApplicationMain"];
 ApplicationMain.main = function() {
 	var projectName = "AgroShop";
-	var config = { build : "18", company : "Vicente Fleitas", file : "AgroShop", fps : 60, name : "AgroShop", orientation : "", packageName : "AgroShop", version : "1.0.0", windows : [{ allowHighDPI : false, alwaysOnTop : false, antialiasing : 0, background : 0, borderless : false, depthBuffer : false, display : 0, fullscreen : false, hardware : true, height : 0, hidden : null, maximized : null, minimized : null, parameters : { }, resizable : true, stencilBuffer : true, title : "AgroShop", vsync : false, width : 0, x : null, y : null}]};
+	var config = { build : "20", company : "Vicente Fleitas", file : "AgroShop", fps : 60, name : "AgroShop", orientation : "", packageName : "AgroShop", version : "1.0.0", windows : [{ allowHighDPI : false, alwaysOnTop : false, antialiasing : 0, background : 0, borderless : false, depthBuffer : false, display : 0, fullscreen : false, hardware : true, height : 0, hidden : null, maximized : null, minimized : null, parameters : { }, resizable : true, stencilBuffer : true, title : "AgroShop", vsync : false, width : 0, x : null, y : null}]};
 	lime_system_System.__registerEntryPoint(projectName,ApplicationMain.create,config);
 };
 ApplicationMain.create = function(config) {
@@ -2399,6 +2399,7 @@ Main.prototype = $extend(openfl_display_Sprite.prototype,{
 			var webpage = new src_SmartphonePage();
 			this.addChild(webpage);
 			this.smartphone = true;
+			this.stage.set_displayState(1);
 		} else {
 			var webpage1 = new src_DesktopPage();
 			this.addChild(webpage1);
@@ -26934,7 +26935,7 @@ var lime_utils_AssetCache = function() {
 	this.audio = new haxe_ds_StringMap();
 	this.font = new haxe_ds_StringMap();
 	this.image = new haxe_ds_StringMap();
-	this.version = 98455;
+	this.version = 431308;
 };
 $hxClasses["lime.utils.AssetCache"] = lime_utils_AssetCache;
 lime_utils_AssetCache.__name__ = ["lime","utils","AssetCache"];
@@ -51477,7 +51478,7 @@ src_DesktopPage.__super__ = openfl_display_Sprite;
 src_DesktopPage.prototype = $extend(openfl_display_Sprite.prototype,{
 	onStage: function(e) {
 		this.removeEventListener("addedToStage",$bind(this,this.onStage));
-		var inicio = new src_desktopLib_BasicCanvas();
+		var inicio = new src_desktopLib_BasicCanvas("update 1");
 		this.addChild(inicio);
 	}
 	,__class__: src_DesktopPage
@@ -51492,7 +51493,7 @@ src_SmartphonePage.__super__ = openfl_display_Sprite;
 src_SmartphonePage.prototype = $extend(openfl_display_Sprite.prototype,{
 	onStage: function(e) {
 		this.removeEventListener("addedToStage",$bind(this,this.onStage));
-		var inicio = new src_smartLib_BasicCanvas();
+		var inicio = new src_smartLib_BasicCanvas("update 1");
 		this.addChild(inicio);
 	}
 	,__class__: src_SmartphonePage
@@ -51532,6 +51533,9 @@ src_desktopLib_BasicCanvas.prototype = $extend(openfl_display_Sprite.prototype,{
 		this.header.get_graphics().drawRect(0,0,920,50);
 		this.header.get_graphics().endFill();
 		this.addChild(this.header);
+		this.titleTextField = new openfl_text_TextField();
+		this.titleTextField.set_text(this.title);
+		this.addChild(this.titleTextField);
 	}
 	,__class__: src_desktopLib_BasicCanvas
 });
@@ -51570,6 +51574,9 @@ src_smartLib_BasicCanvas.prototype = $extend(openfl_display_Sprite.prototype,{
 		this.header.get_graphics().drawRect(0,0,480,50);
 		this.header.get_graphics().endFill();
 		this.addChild(this.header);
+		this.titleTextField = new openfl_text_TextField();
+		this.titleTextField.set_text(this.title);
+		this.addChild(this.titleTextField);
 	}
 	,__class__: src_smartLib_BasicCanvas
 });
