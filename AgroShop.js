@@ -918,7 +918,7 @@ $hxClasses["ApplicationMain"] = ApplicationMain;
 ApplicationMain.__name__ = ["ApplicationMain"];
 ApplicationMain.main = function() {
 	var projectName = "AgroShop";
-	var config = { build : "15", company : "Vicente Fleitas", file : "AgroShop", fps : 60, name : "AgroShop", orientation : "", packageName : "AgroShop", version : "1.0.0", windows : [{ allowHighDPI : false, alwaysOnTop : false, antialiasing : 0, background : 0, borderless : false, depthBuffer : false, display : 0, fullscreen : false, hardware : true, height : 800, hidden : null, maximized : null, minimized : null, parameters : { }, resizable : true, stencilBuffer : true, title : "AgroShop", vsync : false, width : 480, x : null, y : null}]};
+	var config = { build : "16", company : "Vicente Fleitas", file : "AgroShop", fps : 60, name : "AgroShop", orientation : "", packageName : "AgroShop", version : "1.0.0", windows : [{ allowHighDPI : false, alwaysOnTop : false, antialiasing : 0, background : 0, borderless : false, depthBuffer : false, display : 0, fullscreen : false, hardware : true, height : 800, hidden : null, maximized : null, minimized : null, parameters : { }, resizable : true, stencilBuffer : true, title : "AgroShop", vsync : false, width : 480, x : null, y : null}]};
 	lime_system_System.__registerEntryPoint(projectName,ApplicationMain.create,config);
 };
 ApplicationMain.create = function(config) {
@@ -2402,8 +2402,8 @@ Main.prototype = $extend(openfl_display_Sprite.prototype,{
 		this._screenX = openfl_system_Capabilities.get_screenResolutionX() / 480;
 		this._screenY = openfl_system_Capabilities.get_screenResolutionY() / 800;
 		if(Main.getBrowserType() == "MOBILE") {
-			this.set_scaleX(this._screenX);
-			this.set_scaleY(this._screenY);
+			this.set_scaleX(this._screenX * 2);
+			this.set_scaleY(this._screenY * 2);
 			var webpage = new src_SmartphonePage();
 			this.addChild(webpage);
 			this.smartphone = true;
@@ -27137,7 +27137,7 @@ var lime_utils_AssetCache = function() {
 	this.audio = new haxe_ds_StringMap();
 	this.font = new haxe_ds_StringMap();
 	this.image = new haxe_ds_StringMap();
-	this.version = 385300;
+	this.version = 663158;
 };
 $hxClasses["lime.utils.AssetCache"] = lime_utils_AssetCache;
 lime_utils_AssetCache.__name__ = ["lime","utils","AssetCache"];
