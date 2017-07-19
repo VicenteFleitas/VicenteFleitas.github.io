@@ -918,7 +918,7 @@ $hxClasses["ApplicationMain"] = ApplicationMain;
 ApplicationMain.__name__ = ["ApplicationMain"];
 ApplicationMain.main = function() {
 	var projectName = "AgroShop";
-	var config = { build : "16", company : "Vicente Fleitas", file : "AgroShop", fps : 60, name : "AgroShop", orientation : "", packageName : "AgroShop", version : "1.0.0", windows : [{ allowHighDPI : false, alwaysOnTop : false, antialiasing : 0, background : 0, borderless : false, depthBuffer : false, display : 0, fullscreen : false, hardware : true, height : 800, hidden : null, maximized : null, minimized : null, parameters : { }, resizable : true, stencilBuffer : true, title : "AgroShop", vsync : false, width : 480, x : null, y : null}]};
+	var config = { build : "18", company : "Vicente Fleitas", file : "AgroShop", fps : 60, name : "AgroShop", orientation : "", packageName : "AgroShop", version : "1.0.0", windows : [{ allowHighDPI : false, alwaysOnTop : false, antialiasing : 0, background : 0, borderless : false, depthBuffer : false, display : 0, fullscreen : false, hardware : true, height : 0, hidden : null, maximized : null, minimized : null, parameters : { }, resizable : true, stencilBuffer : true, title : "AgroShop", vsync : false, width : 0, x : null, y : null}]};
 	lime_system_System.__registerEntryPoint(projectName,ApplicationMain.create,config);
 };
 ApplicationMain.create = function(config) {
@@ -2376,8 +2376,6 @@ openfl_display_Sprite.prototype = $extend(openfl_display_DisplayObjectContainer.
 	,__class__: openfl_display_Sprite
 });
 var Main = function() {
-	this._screenY = 1;
-	this._screenX = 1;
 	this.smartphone = false;
 	openfl_display_Sprite.call(this);
 	this.addEventListener("addedToStage",$bind(this,this.onStage));
@@ -2395,15 +2393,9 @@ Main.getBrowserType = function() {
 Main.__super__ = openfl_display_Sprite;
 Main.prototype = $extend(openfl_display_Sprite.prototype,{
 	smartphone: null
-	,_screenX: null
-	,_screenY: null
 	,onStage: function(e) {
 		this.removeEventListener("addedToStage",$bind(this,this.onStage));
-		this._screenX = openfl_system_Capabilities.get_screenResolutionX() / 480;
-		this._screenY = openfl_system_Capabilities.get_screenResolutionY() / 800;
 		if(Main.getBrowserType() == "MOBILE") {
-			this.set_scaleX(this._screenX * 2);
-			this.set_scaleY(this._screenY * 2);
 			var webpage = new src_SmartphonePage();
 			this.addChild(webpage);
 			this.smartphone = true;
@@ -23158,201 +23150,6 @@ lime_system_Endian.LITTLE_ENDIAN.__enum__ = lime_system_Endian;
 lime_system_Endian.BIG_ENDIAN = ["BIG_ENDIAN",1];
 lime_system_Endian.BIG_ENDIAN.toString = $estr;
 lime_system_Endian.BIG_ENDIAN.__enum__ = lime_system_Endian;
-var lime_system_JNI = function() { };
-$hxClasses["lime.system.JNI"] = lime_system_JNI;
-lime_system_JNI.__name__ = ["lime","system","JNI"];
-lime_system_JNI.callMember = function(method,jobject,a) {
-	var _g = a.length;
-	switch(_g) {
-	case 0:
-		return method(jobject);
-	case 1:
-		return method(jobject,a[0]);
-	case 2:
-		return method(jobject,a[0],a[1]);
-	case 3:
-		return method(jobject,a[0],a[1],a[2]);
-	case 4:
-		return method(jobject,a[0],a[1],a[2],a[3]);
-	case 5:
-		return method(jobject,a[0],a[1],a[2],a[3],a[4]);
-	case 6:
-		return method(jobject,a[0],a[1],a[2],a[3],a[4],a[5]);
-	case 7:
-		return method(jobject,a[0],a[1],a[2],a[3],a[4],a[5],a[6]);
-	default:
-		return null;
-	}
-};
-lime_system_JNI.callStatic = function(method,a) {
-	var _g = a.length;
-	switch(_g) {
-	case 0:
-		return method();
-	case 1:
-		return method(a[0]);
-	case 2:
-		return method(a[0],a[1]);
-	case 3:
-		return method(a[0],a[1],a[2]);
-	case 4:
-		return method(a[0],a[1],a[2],a[3]);
-	case 5:
-		return method(a[0],a[1],a[2],a[3],a[4]);
-	case 6:
-		return method(a[0],a[1],a[2],a[3],a[4],a[5]);
-	case 7:
-		return method(a[0],a[1],a[2],a[3],a[4],a[5],a[6]);
-	default:
-		return null;
-	}
-};
-lime_system_JNI.createMemberField = function(className,memberName,signature) {
-	lime_system_JNI.init();
-	return null;
-};
-lime_system_JNI.createMemberMethod = function(className,memberName,signature,useArray,quietFail) {
-	if(quietFail == null) quietFail = false;
-	if(useArray == null) useArray = false;
-	lime_system_JNI.init();
-	return null;
-};
-lime_system_JNI.createStaticField = function(className,memberName,signature) {
-	lime_system_JNI.init();
-	return null;
-};
-lime_system_JNI.createStaticMethod = function(className,memberName,signature,useArray,quietFail) {
-	if(quietFail == null) quietFail = false;
-	if(useArray == null) useArray = false;
-	lime_system_JNI.init();
-	return null;
-};
-lime_system_JNI.getEnv = function() {
-	lime_system_JNI.init();
-	return null;
-};
-lime_system_JNI.init = function() {
-	if(!lime_system_JNI.initialized) lime_system_JNI.initialized = true;
-};
-lime_system_JNI.onCallback = function(object,method,args) {
-	var field = Reflect.field(object,method);
-	if(field != null) return Reflect.callMethod(object,field,args);
-	haxe_Log.trace("onCallback - unknown field " + Std.string(method),{ fileName : "JNI.hx", lineNumber : 182, className : "lime.system.JNI", methodName : "onCallback"});
-	return null;
-};
-lime_system_JNI.postUICallback = function(callback) {
-	callback();
-};
-var lime_system_JNIMemberField = function(field) {
-	this.field = field;
-};
-$hxClasses["lime.system.JNIMemberField"] = lime_system_JNIMemberField;
-lime_system_JNIMemberField.__name__ = ["lime","system","JNIMemberField"];
-lime_system_JNIMemberField.prototype = {
-	field: null
-	,get: function(jobject) {
-		return null;
-	}
-	,set: function(jobject,value) {
-		return value;
-	}
-	,__class__: lime_system_JNIMemberField
-};
-var lime_system_JNIStaticField = function(field) {
-	this.field = field;
-};
-$hxClasses["lime.system.JNIStaticField"] = lime_system_JNIStaticField;
-lime_system_JNIStaticField.__name__ = ["lime","system","JNIStaticField"];
-lime_system_JNIStaticField.prototype = {
-	field: null
-	,get: function() {
-		return null;
-	}
-	,set: function(value) {
-		return value;
-	}
-	,__class__: lime_system_JNIStaticField
-};
-var lime_system_JNIMethod = function(method) {
-	this.method = method;
-};
-$hxClasses["lime.system.JNIMethod"] = lime_system_JNIMethod;
-lime_system_JNIMethod.__name__ = ["lime","system","JNIMethod"];
-lime_system_JNIMethod.prototype = {
-	method: null
-	,callMember: function(args) {
-		return null;
-	}
-	,callStatic: function(args) {
-		return null;
-	}
-	,getMemberMethod: function(useArray) {
-		if(useArray) return $bind(this,this.callMember); else return Reflect.makeVarArgs($bind(this,this.callMember));
-	}
-	,getStaticMethod: function(useArray) {
-		if(useArray) return $bind(this,this.callStatic); else return Reflect.makeVarArgs($bind(this,this.callStatic));
-	}
-	,__class__: lime_system_JNIMethod
-};
-var lime_system__$Locale_Locale_$Impl_$ = {};
-$hxClasses["lime.system._Locale.Locale_Impl_"] = lime_system__$Locale_Locale_$Impl_$;
-lime_system__$Locale_Locale_$Impl_$.__name__ = ["lime","system","_Locale","Locale_Impl_"];
-lime_system__$Locale_Locale_$Impl_$._new = function(value) {
-	return value;
-};
-lime_system__$Locale_Locale_$Impl_$.equals = function(a,b) {
-	var language = lime_system__$Locale_Locale_$Impl_$.get_language(a);
-	var region = lime_system__$Locale_Locale_$Impl_$.get_region(a);
-	var language2 = lime_system__$Locale_Locale_$Impl_$.get_language(b);
-	var region2 = lime_system__$Locale_Locale_$Impl_$.get_region(b);
-	var languageMatch = language == language2;
-	var regionMatch = region == region2;
-	if(!languageMatch && language != null && language2 != null) languageMatch = language.toLowerCase() == language2.toLowerCase();
-	if(!regionMatch && region != null && region2 != null) regionMatch = region.toLowerCase() == region2.toLowerCase();
-	return languageMatch && regionMatch;
-};
-lime_system__$Locale_Locale_$Impl_$.__init = function() {
-	if(lime_system__$Locale_Locale_$Impl_$.__systemLocale == null) {
-		var locale = null;
-		locale = navigator.language;
-		if(locale != null) lime_system__$Locale_Locale_$Impl_$.__systemLocale = locale; else lime_system__$Locale_Locale_$Impl_$.__systemLocale = "en-US";
-		lime_system__$Locale_Locale_$Impl_$.set_currentLocale(lime_system__$Locale_Locale_$Impl_$.__systemLocale);
-	}
-};
-lime_system__$Locale_Locale_$Impl_$.get_language = function(this1) {
-	if(this1 != null) {
-		var index = this1.indexOf("_");
-		if(index > -1) return this1.substring(0,index);
-		index = this1.indexOf("-");
-		if(index > -1) return this1.substring(0,index);
-	}
-	return this1;
-};
-lime_system__$Locale_Locale_$Impl_$.get_region = function(this1) {
-	if(this1 != null) {
-		var underscoreIndex = this1.indexOf("_");
-		var dotIndex = this1.indexOf(".");
-		var dashIndex = this1.indexOf("-");
-		if(underscoreIndex > -1) {
-			if(dotIndex > -1) return this1.substring(underscoreIndex + 1,dotIndex); else return this1.substring(underscoreIndex + 1);
-		} else if(dashIndex > -1) {
-			if(dotIndex > -1) return this1.substring(dashIndex + 1,dotIndex); else return this1.substring(dashIndex + 1);
-		}
-	}
-	return null;
-};
-lime_system__$Locale_Locale_$Impl_$.get_currentLocale = function() {
-	lime_system__$Locale_Locale_$Impl_$.__init();
-	return lime_system__$Locale_Locale_$Impl_$.currentLocale;
-};
-lime_system__$Locale_Locale_$Impl_$.set_currentLocale = function(value) {
-	lime_system__$Locale_Locale_$Impl_$.__init();
-	return lime_system__$Locale_Locale_$Impl_$.currentLocale = value;
-};
-lime_system__$Locale_Locale_$Impl_$.get_systemLocale = function() {
-	lime_system__$Locale_Locale_$Impl_$.__init();
-	return lime_system__$Locale_Locale_$Impl_$.__systemLocale;
-};
 var lime_system_System = function() { };
 $hxClasses["lime.system.System"] = lime_system_System;
 lime_system_System.__name__ = ["lime","system","System"];
@@ -27137,7 +26934,7 @@ var lime_utils_AssetCache = function() {
 	this.audio = new haxe_ds_StringMap();
 	this.font = new haxe_ds_StringMap();
 	this.image = new haxe_ds_StringMap();
-	this.version = 663158;
+	this.version = 98455;
 };
 $hxClasses["lime.utils.AssetCache"] = lime_utils_AssetCache;
 lime_utils_AssetCache.__name__ = ["lime","utils","AssetCache"];
@@ -48431,81 +48228,6 @@ openfl_system_ApplicationDomain.prototype = {
 	}
 	,__class__: openfl_system_ApplicationDomain
 };
-var openfl_system_Capabilities = function() { };
-$hxClasses["openfl.system.Capabilities"] = openfl_system_Capabilities;
-openfl_system_Capabilities.__name__ = ["openfl","system","Capabilities"];
-openfl_system_Capabilities.hasMultiChannelAudio = function(type) {
-	return false;
-};
-openfl_system_Capabilities.get_cpuArchitecture = function() {
-	return "x86";
-};
-openfl_system_Capabilities.get_language = function() {
-	var language = lime_system__$Locale_Locale_$Impl_$.get_language(lime_system__$Locale_Locale_$Impl_$.get_currentLocale());
-	if(language != null) {
-		language = language.toLowerCase();
-		switch(language) {
-		case "cs":case "da":case "nl":case "en":case "fi":case "fr":case "de":case "hu":case "it":case "ja":case "ko":case "nb":case "pl":case "pt":case "ru":case "es":case "sv":case "tr":
-			return language;
-		case "zh":
-			var region = lime_system__$Locale_Locale_$Impl_$.get_region(lime_system__$Locale_Locale_$Impl_$.get_currentLocale());
-			if(region != null) {
-				var _g = region.toUpperCase();
-				switch(_g) {
-				case "TW":case "HANT":
-					return "zh-TW";
-				default:
-				}
-			}
-			return "zh-CN";
-		default:
-			return "xu";
-		}
-	}
-	return "en";
-};
-openfl_system_Capabilities.get_manufacturer = function() {
-	return "OpenFL HTML5";
-};
-openfl_system_Capabilities.get_os = function() {
-	return "HTML5";
-};
-openfl_system_Capabilities.get_pixelAspectRatio = function() {
-	return 1;
-};
-openfl_system_Capabilities.get_screenDPI = function() {
-	var $window;
-	if(openfl_Lib.application != null) $window = openfl_Lib.application.__windows[0]; else $window = null;
-	var screenDPI;
-	screenDPI = 72;
-	if($window != null) screenDPI *= $window.__scale;
-	return screenDPI;
-};
-openfl_system_Capabilities.get_screenResolutionX = function() {
-	var stage = openfl_Lib.current.stage;
-	var resolutionX = 0;
-	if(stage.window != null) {
-		var display = stage.window.get_display();
-		if(display != null) resolutionX = display.currentMode.width;
-	}
-	if(resolutionX > 0) return resolutionX;
-	return stage.stageWidth;
-};
-openfl_system_Capabilities.get_screenResolutionY = function() {
-	var stage = openfl_Lib.current.stage;
-	var resolutionY = 0;
-	if(stage.window != null) {
-		var display = stage.window.get_display();
-		if(display != null) resolutionY = display.currentMode.height;
-	}
-	if(resolutionY > 0) return resolutionY;
-	return stage.stageHeight;
-};
-openfl_system_Capabilities.get_version = function() {
-	var value = "WEB";
-	value += " " + StringTools.replace("5.1.5",".",",") + ",0";
-	return value;
-};
 var openfl_system_LoaderContext = function(checkPolicyFile,applicationDomain,securityDomain) {
 	if(checkPolicyFile == null) checkPolicyFile = false;
 	this.checkPolicyFile = checkPolicyFile;
@@ -48530,33 +48252,6 @@ $hxClasses["openfl.system.SecurityDomain"] = openfl_system_SecurityDomain;
 openfl_system_SecurityDomain.__name__ = ["openfl","system","SecurityDomain"];
 openfl_system_SecurityDomain.prototype = {
 	__class__: openfl_system_SecurityDomain
-};
-var openfl_system__$TouchscreenType_TouchscreenType_$Impl_$ = {};
-$hxClasses["openfl.system._TouchscreenType.TouchscreenType_Impl_"] = openfl_system__$TouchscreenType_TouchscreenType_$Impl_$;
-openfl_system__$TouchscreenType_TouchscreenType_$Impl_$.__name__ = ["openfl","system","_TouchscreenType","TouchscreenType_Impl_"];
-openfl_system__$TouchscreenType_TouchscreenType_$Impl_$.fromString = function(value) {
-	switch(value) {
-	case "finger":
-		return 0;
-	case "none":
-		return 1;
-	case "stylus":
-		return 2;
-	default:
-		return null;
-	}
-};
-openfl_system__$TouchscreenType_TouchscreenType_$Impl_$.toString = function(value) {
-	switch(value) {
-	case 0:
-		return "finger";
-	case 1:
-		return "none";
-	case 2:
-		return "stylus";
-	default:
-		return null;
-	}
 };
 var openfl_text__$AntiAliasType_AntiAliasType_$Impl_$ = {};
 $hxClasses["openfl.text._AntiAliasType.AntiAliasType_Impl_"] = openfl_text__$AntiAliasType_AntiAliasType_$Impl_$;
@@ -52614,8 +52309,6 @@ lime_media_openal_ALC.ENUMERATE_ALL_EXT = 1;
 lime_media_openal_ALC.DEFAULT_ALL_DEVICES_SPECIFIER = 4114;
 lime_media_openal_ALC.ALL_DEVICES_SPECIFIER = 4115;
 lime_system_Clipboard.onUpdate = new lime_app__$Event_$Void_$Void();
-lime_system_JNI.alreadyCreated = new haxe_ds_StringMap();
-lime_system_JNI.initialized = false;
 lime_system_System.__directories = new haxe_ds_IntMap();
 lime_text__$TextDirection_TextDirection_$Impl_$.INVALID = 0;
 lime_text__$TextDirection_TextDirection_$Impl_$.LEFT_TO_RIGHT = 4;
@@ -53612,35 +53305,7 @@ openfl_net__$URLLoaderDataFormat_URLLoaderDataFormat_$Impl_$.BINARY = 0;
 openfl_net__$URLLoaderDataFormat_URLLoaderDataFormat_$Impl_$.TEXT = 1;
 openfl_net__$URLLoaderDataFormat_URLLoaderDataFormat_$Impl_$.VARIABLES = 2;
 openfl_system_ApplicationDomain.currentDomain = new openfl_system_ApplicationDomain(null);
-openfl_system_Capabilities.avHardwareDisable = true;
-openfl_system_Capabilities.hasAccessibility = false;
-openfl_system_Capabilities.hasAudio = true;
-openfl_system_Capabilities.hasAudioEncoder = false;
-openfl_system_Capabilities.hasEmbeddedVideo = false;
-openfl_system_Capabilities.hasIME = false;
-openfl_system_Capabilities.hasMP3 = false;
-openfl_system_Capabilities.hasPrinting = true;
-openfl_system_Capabilities.hasScreenBroadcast = false;
-openfl_system_Capabilities.hasScreenPlayback = false;
-openfl_system_Capabilities.hasStreamingAudio = false;
-openfl_system_Capabilities.hasStreamingVideo = false;
-openfl_system_Capabilities.hasTLS = true;
-openfl_system_Capabilities.hasVideoEncoder = true;
-openfl_system_Capabilities.isDebugger = false;
-openfl_system_Capabilities.isEmbeddedInAcrobat = false;
-openfl_system_Capabilities.localFileReadDisable = true;
-openfl_system_Capabilities.maxLevelIDC = 0;
-openfl_system_Capabilities.playerType = "PlugIn";
-openfl_system_Capabilities.screenColor = "color";
-openfl_system_Capabilities.serverString = "";
-openfl_system_Capabilities.supports32BitProcesses = false;
-openfl_system_Capabilities.supports64BitProcesses = false;
-openfl_system_Capabilities.touchscreenType = 0;
-openfl_system_Capabilities.__standardDensities = [120,160,240,320,480,640,800,960];
 openfl_system_SecurityDomain.currentDomain = new openfl_system_SecurityDomain();
-openfl_system__$TouchscreenType_TouchscreenType_$Impl_$.FINGER = 0;
-openfl_system__$TouchscreenType_TouchscreenType_$Impl_$.NONE = 1;
-openfl_system__$TouchscreenType_TouchscreenType_$Impl_$.STYLUS = 2;
 openfl_text__$AntiAliasType_AntiAliasType_$Impl_$.ADVANCED = 0;
 openfl_text__$AntiAliasType_AntiAliasType_$Impl_$.NORMAL = 1;
 openfl_text_Font.__registeredFonts = [];
