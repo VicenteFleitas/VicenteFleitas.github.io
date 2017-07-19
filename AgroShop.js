@@ -918,7 +918,7 @@ $hxClasses["ApplicationMain"] = ApplicationMain;
 ApplicationMain.__name__ = ["ApplicationMain"];
 ApplicationMain.main = function() {
 	var projectName = "AgroShop";
-	var config = { build : "11", company : "Vicente Fleitas", file : "AgroShop", fps : 60, name : "AgroShop", orientation : "", packageName : "AgroShop", version : "1.0.0", windows : [{ allowHighDPI : false, alwaysOnTop : false, antialiasing : 0, background : 0, borderless : false, depthBuffer : false, display : 0, fullscreen : false, hardware : true, height : 0, hidden : null, maximized : null, minimized : null, parameters : { }, resizable : true, stencilBuffer : true, title : "AgroShop", vsync : false, width : 0, x : null, y : null}]};
+	var config = { build : "14", company : "Vicente Fleitas", file : "AgroShop", fps : 60, name : "AgroShop", orientation : "", packageName : "AgroShop", version : "1.0.0", windows : [{ allowHighDPI : false, alwaysOnTop : false, antialiasing : 0, background : 0, borderless : false, depthBuffer : false, display : 0, fullscreen : false, hardware : true, height : 0, hidden : null, maximized : null, minimized : null, parameters : { }, resizable : true, stencilBuffer : true, title : "AgroShop", vsync : false, width : 0, x : null, y : null}]};
 	lime_system_System.__registerEntryPoint(projectName,ApplicationMain.create,config);
 };
 ApplicationMain.create = function(config) {
@@ -2376,6 +2376,8 @@ openfl_display_Sprite.prototype = $extend(openfl_display_DisplayObjectContainer.
 	,__class__: openfl_display_Sprite
 });
 var Main = function() {
+	this._screenY = 1;
+	this._screenX = 1;
 	this.smartphone = false;
 	openfl_display_Sprite.call(this);
 	this.addEventListener("addedToStage",$bind(this,this.onStage));
@@ -2393,9 +2395,15 @@ Main.getBrowserType = function() {
 Main.__super__ = openfl_display_Sprite;
 Main.prototype = $extend(openfl_display_Sprite.prototype,{
 	smartphone: null
+	,_screenX: null
+	,_screenY: null
 	,onStage: function(e) {
 		this.removeEventListener("addedToStage",$bind(this,this.onStage));
+		this._screenX = openfl_system_Capabilities.get_screenResolutionX() / 480;
+		this._screenY = openfl_system_Capabilities.get_screenResolutionY() / 800;
 		if(Main.getBrowserType() == "MOBILE") {
+			this.set_scaleX(this._screenX);
+			this.set_scaleY(this._screenY);
 			var webpage = new src_SmartphonePage();
 			this.addChild(webpage);
 			this.smartphone = true;
@@ -2648,7 +2656,7 @@ ManifestResources.init = function(config) {
 	var data;
 	var manifest;
 	var library;
-	data = "{\"name\":null,\"assets\":\"ah\",\"version\":2,\"libraryArgs\":[],\"libraryType\":null}";
+	data = "{\"name\":null,\"assets\":\"aoy4:pathy20:img%2Ficonagro01.jpgy4:sizei6940y4:typey5:IMAGEy2:idR1y7:preloadtgoR0y21:img%2Ficonagro02.jpegR2i7538R3R4R5R7R6tgoR0y21:img%2Ficonagro03.jpegR2i33301R3R4R5R8R6tgh\",\"version\":2,\"libraryArgs\":[],\"libraryType\":null}";
 	manifest = lime_utils_AssetManifest.parse(data,rootPath);
 	library = lime_utils_AssetLibrary.fromManifest(manifest);
 	lime_utils_Assets.registerLibrary("default",library);
@@ -27129,7 +27137,7 @@ var lime_utils_AssetCache = function() {
 	this.audio = new haxe_ds_StringMap();
 	this.font = new haxe_ds_StringMap();
 	this.image = new haxe_ds_StringMap();
-	this.version = 833896;
+	this.version = 324292;
 };
 $hxClasses["lime.utils.AssetCache"] = lime_utils_AssetCache;
 lime_utils_AssetCache.__name__ = ["lime","utils","AssetCache"];
