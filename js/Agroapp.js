@@ -4,7 +4,7 @@ AgroShop.Agroapp = function(){};
 
 AgroShop.Agroapp.prototype =
 {
-	create: function()
+	preload: function()
 	{
 		this.background = this.game.add.sprite(0,0,'fondo');
 		this.createBar('icon1');
