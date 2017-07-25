@@ -19,7 +19,7 @@ AgroShop.Boot.prototype =
 		this.scale.maxHeight = 1920;
 		this.scale.pageAlignHorizontally = true;
 		//this.scale.pageAlignVertically = true;
-
+		
 		this.state.start('Preload');
 	}
 };
