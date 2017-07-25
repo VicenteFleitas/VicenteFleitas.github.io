@@ -12,7 +12,7 @@ AgroShop.Boot.prototype =
 	create: function()
 	{
 		this.game.stage.backgroundColor = '#fff';
-		//this.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL;
+		this.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL;
 		this.scale.minWidth = 480;
 		this.scale.minHeight = 800;
 		this.scale.maxWidth = 1920;
