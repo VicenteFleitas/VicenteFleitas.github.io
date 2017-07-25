@@ -19,6 +19,7 @@ AgroShop.Boot.prototype =
 		this.scale.maxHeight =2880;
 		this.scale.pageAlignHorizontally = true;
 		this.scale.pageAlignVertically = true;
+		this.game.scale.windowConstraints.bottom = "visual";
 
 		this.state.start('Preload');
 	}
