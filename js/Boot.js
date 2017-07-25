@@ -12,14 +12,14 @@ AgroShop.Boot.prototype =
 	create: function()
 	{
 		this.game.stage.backgroundColor = '#fff';
-		this.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL;
-		this.scale.minWidth = 800;
-		this.scale.minHeight = 480;
-		this.scale.maxWidth = 2880;
-		this.scale.maxHeight = 1920;
+		//this.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL;
+		this.scale.minWidth = 480;
+		this.scale.minHeight = 800;
+		this.scale.maxWidth = 1920;
+		this.scale.maxHeight =2880;
 		this.scale.pageAlignHorizontally = true;
-		//this.scale.pageAlignVertically = true;
-		
+		this.scale.pageAlignVertically = true;
+
 		this.state.start('Preload');
 	}
 };
