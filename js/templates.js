@@ -183,7 +183,7 @@ export function contact() {
 				</div>
 			</div>
 			<div class="container-fluid">
-				<div class="row justify-content-md-center my-footer-bottom">© 2019 Copyright: VicenteFleitas</div>
+				<div class="row justify-content-md-center my-footer-bottom">Contacto: 0975 106 323 - vicentefleitas@icloud.com</div>
 			</div>
 	`;
 }
