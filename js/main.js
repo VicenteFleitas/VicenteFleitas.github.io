@@ -1,10 +1,11 @@
-import { navBar, perfil, trabajos } from "./templates.js";
+import { navBar, perfil, trabajos, contact } from "./templates.js";
 
 let header = document.getElementById('navBar');
 let body = document.getElementById('content');
+let footer = document.getElementById('footer');
 header.innerHTML = navBar();
 body.innerHTML = perfil();
-
+footer.innerHTML = contact();
 
 document.getElementById('btn-perfil').addEventListener('click', () => {
 	body.innerHTML = perfil();
