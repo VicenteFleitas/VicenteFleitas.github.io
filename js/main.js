@@ -1,4 +1,4 @@
-import { navBar, perfil, trabajos, contact } from "./templates.js";
+import { navBar, perfil, trabajos, contact, juegos } from "./templates.js";
 
 let header = document.getElementById('navBar');
 let body = document.getElementById('content');
@@ -10,8 +10,10 @@ footer.innerHTML = contact();
 document.getElementById('btn-perfil').addEventListener('click', () => {
 	body.innerHTML = perfil();
 }, false);
-document.getElementById('btn-jobs').addEventListener('click', () => {
+document.getElementById('btn-servicios').addEventListener('click', () => {
 	body.innerHTML = trabajos();
 }, false);
-
+document.getElementById('btn-juegos').addEventListener('click', () => {
+	body.innerHTML = juegos();
+}, false);
 

@@ -10,10 +10,10 @@ export function navBar() {
 			        <a id="btn-perfil" class="nav-link" href="#">Perfil <span class="sr-only">(current)</span></a>
 			      </li>
 			      <li class="nav-item">
-			        <a id="btn-jobs" class="nav-link" href="#">Servicios</a>
+			        <a id="btn-servicios" class="nav-link" href="#">Servicios</a>
 			      </li>
 			      <li class="nav-item">
-			        <a class="nav-link" href="#">Juegos</a>
+			        <a id="btn-juegos" class="nav-link" href="#">Juegos</a>
 			      </li>
 			      <li class="nav-item dropdown">
 			        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -107,6 +107,7 @@ function post() {
 					)}
 			</ul>`;
 }
+
 function list(img, title, content) {
 	return `<li class="media my-media">
 			    <img width="80em" src="${img}" class="mr-3 img-thumbnail">
@@ -193,7 +194,7 @@ function card(title, description, img, array) {
 	array.forEach(element => {
 		list += `<li class="list-group-item">${element}</li>`;
 	});
-	return `<div class="card" style="width: 18rem;">
+	return `<div class="card" style="width: 18rem; margin-bottom: 15px;">
 			  <img src="${img}" class="card-img-top" alt="...">
 				<div class="card-body">
 					<h5 class="card-title">${title}</h5>
@@ -208,9 +209,41 @@ function card(title, description, img, array) {
 			</div>`;
 }
 
+export function juegos() {
+	return `<div class="card-deck game-content">
+				${gameCard(
+					'Golden8Bits', 
+					'Fantasy Console', 
+					'img/headerg8b.png',
+					'https://store.steampowered.com/app/794230/Golden8bits/'
+				)}
+				${gameCard(
+					'SolarRuins', 
+					'Adventure Game', 
+					'img/solarruins.png',
+					'https://criptomedia.itch.io/solarruins'
+				)}
+				${gameCard(
+					'Golden8Bits', 
+					'Fantasy Console', 
+					'img/headerg8b.png',
+					'https://store.steampowered.com/app/794230/Golden8bits/'
+				)}
+			</div>`;
+}
 
-
-
+function gameCard(title, description, img, link) {
+	return `<div class="card" style="width: 18rem; margin-bottom: 15px;">
+			  <img src="${img}" class="card-img-top">
+				<div class="card-body">
+					<h5 class="card-title">${title}</h5>
+					<p class="card-text">${description}</p>
+				</div>
+				<div class="card-body">
+					<a href="${link}" class="btn btn-primary">Jugar</a>
+				</div>
+			</div>`;
+}
 
 
 
