@@ -224,10 +224,10 @@ export function juegos() {
 					'https://criptomedia.itch.io/solarruins'
 				)}
 				${gameCard(
-					'Golden8Bits', 
-					'Fantasy Console', 
-					'img/headerg8b.png',
-					'https://store.steampowered.com/app/794230/Golden8bits/'
+					'WingedMind', 
+					'Mobile Game', 
+					'img/winged.png',
+					'https://play.google.com/store/apps/details?id=com.criptomedia.WingedMindPranikasWorld'
 				)}
 			</div>`;
 }
