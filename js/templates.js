@@ -17,15 +17,13 @@ export function navBar() {
 			      </li>
 			      <li class="nav-item dropdown">
 			        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-			          Economía
+			          Blog de economía
 			        </a>
 			        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-			          <a class="dropdown-item" href="#">Impuestos</a>
-			          <a class="dropdown-item" href="#">Teoria de la selección pública</a>
-			          <a class="dropdown-item" href="#">Estado</a>
-			          <a class="dropdown-item" href="#">Monopolios e instituciones públicas</a>
-			          <a class="dropdown-item" href="#">Moral Racionalista</a>
-			          <a class="dropdown-item" href="#">Regulaciones</a>
+
+			          <a id="indiVsColect" class="dropdown-item">Individualismo y colectivismo</a>
+			          <a class="dropdown-item">El orden extenso</a>
+			          
 			        </div>
 			      </li>
 			    </ul>
@@ -240,14 +238,61 @@ function gameCard(title, description, img, link) {
 					<p class="card-text">${description}</p>
 				</div>
 				<div class="card-body">
-					<a href="${link}" class="btn btn-primary">Jugar</a>
+					<a href="${link}" target="_blank" class="btn btn-primary">Jugar</a>
 				</div>
 			</div>`;
 }
 
+export function setPost(id) {
+	return `<div class="row">
+				<div class="col-sm">
+					${blogCard(
+						"Individualismo y Colectivismo", 
+						" ", 
+						"'Los socialistas creen en dos cosas que son absolutamente diferentes y hasta quizá contradictorias: libertad y organización.'"
+					)}
+					${blogCard(
+						"Error conceptual", 
+						" ", 
+						"Existe un obstáculo o confusión responsable del camino por el que somos arrastrados hacia cosas que nadie desea.<br>Hablamos del concepto de socialismo."
+					)}
+					${blogCard(
+						"Socialismo", 
+						"Fines y métodos", 
+						"<strong>Fines del socialismo:</strong><br> ideales de justicia social, mayor igualdad y seguridad.<br><br><strong>Métodos del socialismo:</strong><br> Abolición de la empresa privada y la propiedad privada de los medios de producción.<br>Creación de un 'sistema de economía planificada', que reemplaza al empresario que actúa en busca de un beneficio por un 'organismo central de planificación'."
+					)}
+				</div>
+				<div class="col-sm">
+					${blogCard(
+						"Tipos de socialistas", 
+						"", 
+						"1. Los que sólo se preocupan por los fines, no comprenden cómo pueden alcanzarse ni les preocupa, para ellos deben alcanzarse a cualquier costo.<br><br>2. Aquellos que lo utilizan como objeto de la práctica política, para ellos tanto métodos como fines son escenciales.<br><br>3. Por último los que valoran los fines pero se niegan a apoyar al socialismo en razón del peligro de sus metodologías."
+					)}
+					${blogCard(
+						"El foco erróneo", 
+						" ", 
+						"La discusión principal es sobre qué medios utilizar, no si pueden alcanzar los fines simultáneamente o a cual costo.<br><br>La situación se complica por el hecho de valer los mismos medios (planificación económica) para otras muchas finalidades."
+					)}
+				</div>
+				<div class="col-sm">
+					${blogCard(
+						"header", 
+						"title", 
+						"content"
+					)}
+				</div>
+			</div>`;
+}
 
-
-
+function blogCard(header, title, content) {
+	return `<div class="card border-light mb-3" style="max-width: 18rem;">
+				<div class="card-header">${header}</div>
+				<div class="card-body">
+					<h5 class="card-title">${title}</h5>
+					<p class="card-text">${content}</p>
+				</div>
+			</div>`;
+}
 
 
 
