@@ -25,9 +25,6 @@ function addEvent(id, event, func) {
 }
 
 function redirect() {
-	// let url = window.location.href;
-	// let array = url.split("/");
-	// let screen = array[array.length - 1];
 	
 	var url_string = window.location.href;
 	var url = new URL(url_string);

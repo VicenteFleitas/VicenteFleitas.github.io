@@ -22,7 +22,7 @@ export function navBar() {
 			        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
 
 			          <a id="indiVsColect" class="dropdown-item">Individualismo y colectivismo</a>
-			          <a class="dropdown-item">El orden extenso</a>
+			          <a class="dropdown-item">La información dispersa</a>
 			          
 			        </div>
 			      </li>
@@ -86,7 +86,7 @@ function post() {
 			  ${list(
 			  	'img/perfil.jpg', 
 			  	'Hola Gente!', 
-			  	'Vengo trabajando en desarrollo de Software hace 10 años, y es una de mis grandes pasiones junto con la lectura y el Basquetbol. Me inicie en el mundo del software con flash y el lenguaje as3, luego tuve que migrar a Openfl y haxe. Estuve trabajando 2 años con unity3D y c#. Finalmente terminé trabajando con javascript que es el lenguaje que más uso para desarrollo.'
+			  	'Vengo trabajando en desarrollo de Software hace 10 años, y es una de mis grandes pasiones junto con la lectura, economía y el Basquetbol. Me inicie en el mundo del software con flash y el lenguaje as3, luego tuve que migrar a Openfl y haxe. Estuve trabajando 2 años con unity3D y c#. Finalmente terminé trabajando con javascript que es el lenguaje que más uso para desarrollo.'
 			  	)}
 				${list(
 					'img/perfil.jpg',
@@ -96,7 +96,7 @@ function post() {
 				${list(
 					'img/perfil.jpg',
 					'Firebase para autenticación y base de datos.',
-					'Firebase es una plataforma de Google, conocida por su servicio de base de datos en la nube. Este servicio permite conectar aplicaciones web y mobile con esa base de datos y actualizarse a tiempo real bidireaccionalmente.'
+					'Firebase es una plataforma de Google, conocida por su servicio de base de datos en la nube. Este servicio permite conectar aplicaciones web y mobile con esa base de datos y actualizarse a tiempo real bidireccionalmente.'
 					)}
 				${list(
 					'img/perfil.jpg',
@@ -247,39 +247,61 @@ export function setPost(id) {
 	return `<div class="row">
 				<div class="col-sm">
 					${blogCard(
-						"Individualismo y Colectivismo", 
+						"I. Individualismo y Colectivismo", 
 						" ", 
 						"'Los socialistas creen en dos cosas que son absolutamente diferentes y hasta quizá contradictorias: libertad y organización.'"
 					)}
 					${blogCard(
-						"Error conceptual", 
+						"II. Error conceptual", 
 						" ", 
 						"Existe un obstáculo o confusión responsable del camino por el que somos arrastrados hacia cosas que nadie desea.<br>Hablamos del concepto de socialismo."
 					)}
 					${blogCard(
-						"Socialismo", 
+						"III. Socialismo", 
 						"Fines y métodos", 
 						"<strong>Fines del socialismo:</strong><br> ideales de justicia social, mayor igualdad y seguridad.<br><br><strong>Métodos del socialismo:</strong><br> Abolición de la empresa privada y la propiedad privada de los medios de producción.<br>Creación de un 'sistema de economía planificada', que reemplaza al empresario que actúa en busca de un beneficio por un 'organismo central de planificación'."
 					)}
 				</div>
 				<div class="col-sm">
 					${blogCard(
-						"Tipos de socialistas", 
+						"IV. Tipos de socialistas", 
 						"", 
 						"1. Los que sólo se preocupan por los fines, no comprenden cómo pueden alcanzarse ni les preocupa, para ellos deben alcanzarse a cualquier costo.<br><br>2. Aquellos que lo utilizan como objeto de la práctica política, para ellos tanto métodos como fines son escenciales.<br><br>3. Por último los que valoran los fines pero se niegan a apoyar al socialismo en razón del peligro de sus metodologías."
 					)}
 					${blogCard(
-						"El foco erróneo", 
+						"V. El foco erróneo", 
 						" ", 
-						"La discusión principal es sobre qué medios utilizar, no si pueden alcanzar los fines simultáneamente o a cual costo.<br><br>La situación se complica por el hecho de valer los mismos medios (planificación económica) para otras muchas finalidades."
+						"La discusión principal es sobre qué medios utilizar, no si pueden alcanzar los fines simultáneamente o a cual costo.<br><br>La situación se complica por el hecho de valer los mismos medios (planificación económica) para otras muchas finalidades.<br><br>Qué implica 'planificación económica'? Centralizar la dirección de la actividad económica, para lograr distribución de la renta según la justicia social."
 					)}
 				</div>
 				<div class="col-sm">
 					${blogCard(
-						"header", 
-						"title", 
-						"content"
+						"VI. El problema de la planificación", 
+						" ", 
+						"Debido a la información dispersa el estado no debe interferir y la capacidad de elección debe ser devuelta a cada persona y así sortear la imposibilidad del cálculo económico.<br><br>La información dispersa existente está al alcance de cada uno, siempre que todos seamos libres de tomar decisiones.<br><br>El estado no puede hacerse con tal información debido a que nadie puede transmitir a un semejante cuanto sabe.<br><br>Por qué la información respecto al tiempo, lugar y circunstancia no puede ser recolectado por un sistema centralizado?: parte de la información disponible, en cada uno, sólo irá tomando forma a medida que nuestras decisiones son adoptadas. Cada sujeto sólo recurre a estas informaciones mientras sigue comportamientos resultantes frente a circunstancias que le afectan (ejemplo: escasez relativa de materias primas, mano de obra calificada etc.)<br><br>El criterio personal sumado esa información intransferible (a excepción del uso de precios) permite descubrir 'lo que vale la pena descubrir'; información que depende también de reacciones de muchos otros sujetos, encriptados en precios de mercado libre, condicionados por sus respectivos entornos."
 					)}
+				</div>
+			</div>
+			<div class="row">
+				<div class="card text-center">
+				  <div class="card-header">
+				    <ul class="nav nav-tabs card-header-tabs">
+				      <li class="nav-item">
+				        <a class="nav-link active">Quienes impulsan</a>
+				      </li>
+				      <li class="nav-item">
+				        <a class="nav-link">Peligro</a>
+				      </li>
+				      <li class="nav-item">
+				        <a class="nav-link">Colectivismo</a>
+				      </li>
+				    </ul>
+				  </div>
+				  <div class="card-body">
+				    <h5 class="card-title">Special title treatment</h5>
+				    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+				    <a href="#" class="btn btn-primary">Go somewhere</a>
+				  </div>
 				</div>
 			</div>`;
 }
