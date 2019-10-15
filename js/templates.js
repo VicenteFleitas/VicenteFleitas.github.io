@@ -249,7 +249,7 @@ export function setPost(id) {
 					${blogCard(
 						"I. Individualismo y Colectivismo", 
 						" ", 
-						"'Los socialistas creen en dos cosas que son absolutamente diferentes y hasta quizá contradictorias: libertad y organización.'"
+						"<span class='font-italic'>'Los socialistas creen en dos cosas que son absolutamente diferentes y hasta quizá contradictorias: libertad y organización.'</span>"
 					)}
 					${blogCard(
 						"II. Error conceptual", 
@@ -283,25 +283,96 @@ export function setPost(id) {
 				</div>
 			</div>
 			<div class="row">
-				<div class="card text-center">
-				  <div class="card-header">
-				    <ul class="nav nav-tabs card-header-tabs">
-				      <li class="nav-item">
-				        <a class="nav-link active">Quienes impulsan</a>
-				      </li>
-				      <li class="nav-item">
-				        <a class="nav-link">Peligro</a>
-				      </li>
-				      <li class="nav-item">
-				        <a class="nav-link">Colectivismo</a>
-				      </li>
-				    </ul>
-				  </div>
-				  <div class="card-body">
-				    <h5 class="card-title">Special title treatment</h5>
-				    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-				    <a href="#" class="btn btn-primary">Go somewhere</a>
-				  </div>
+				<h4>Planificación económica<hr></h4>
+			</div>
+			<div class="row">
+				<div class="col-sm">
+					<ul class="nav nav-tabs" id="myTab" role="tablist">
+					  <li class="nav-item">
+					    <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">
+							Quienes impulsan?
+					    </a>
+					  </li>
+					  <li class="nav-item">
+					    <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">
+							El peligro
+					    </a>
+					  </li>
+					  <li class="nav-item">
+					    <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">
+							Colectivismo
+					    </a>
+					  </li>
+					</ul>
+					<div class="tab-content mt-2" id="myTabContent">
+					  <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+						<p>Todos aquellos que demandan que la "producción para el uso"
+						sustituya a la producción para el beneficio.</p>
+					  </div>
+					  <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+						<p>Tal planificación es igualmente útil para lograr lo opuesto, distribuir la renta a alguna
+						élite, la intelectual por ejemplo.\n
+						Los métodos que habríamos de emplear son los mismos que asegurarían una distribución
+						igualitaria.</p>
+					  </div>
+					  <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+						<p>Estos métodos citados son propios del colectivismo, es por ello que el socialismo
+						es una especie de este género.\n
+						La reglamentación de la vida económica pone a los
+						gobiernos en tal posición que, en palabras de Adan Smith, "para sostenerse, 
+						se veían obligados a ser opresores y tiránicos."</p>
+						<p>Colectivismo: planificación en pos de cualquier ideal dsitributivo determinado.</p>
+					  </div>
+					</div>
+				</div>
+				<div class="col-sm">
+					<img src="img/planificacionEco.jpg" class="img-fluid" alt="Responsive image">
+				</div>
+			</div>
+			<div class="row">
+				<h4>Planificación<hr></h4>
+			</div>
+			<div class="row">
+				<div class="col-sm">
+					<ul class="nav nav-tabs" id="myTab" role="tablist">
+					  <li class="nav-item">
+					    <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">
+							Análisis
+					    </a>
+					  </li>
+					  <li class="nav-item">
+					    <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">
+							El peligro
+					    </a>
+					  </li>
+					  <li class="nav-item">
+					    <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">
+							Colectivismo
+					    </a>
+					  </li>
+					</ul>
+					<div class="tab-content mt-2" id="myTabContent">
+					  <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+						<p>.</p>
+					  </div>
+					  <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+						<p>Tal planificación es igualmente útil para lograr lo opuesto, distribuir la renta a alguna
+						élite, la intelectual por ejemplo.\n
+						Los métodos que habríamos de emplear son los mismos que asegurarían una distribución
+						igualitaria.</p>
+					  </div>
+					  <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+						<p>Estos métodos citados son propios del colectivismo, es por ello que el socialismo
+						es una especie de este género.\n
+						La reglamentación de la vida económica pone a los
+						gobiernos en tal posición que, en palabras de Adan Smith, "para sostenerse, 
+						se veían obligados a ser opresores y tiránicos."</p>
+						<p>Colectivismo: planificación en pos de cualquier ideal dsitributivo determinado.</p>
+					  </div>
+					</div>
+				</div>
+				<div class="col-sm">
+					<img src="img/individualismoVsColect.jpg" class="img-fluid" alt="Responsive image">
 				</div>
 			</div>`;
 }
