@@ -334,34 +334,46 @@ export function setPost(id) {
 			</div>
 			<div class="row">
 				<div class="col-sm">
-					<ul class="nav nav-tabs" id="myTab" role="tablist">
+					<ul class="nav nav-tabs" id="myTab2" role="tablist">
 					  <li class="nav-item">
-					    <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">
-							Análisis
+					    <a class="nav-link active" id="home-tab2" data-toggle="tab" href="#home2" role="tab" aria-controls="home2" aria-selected="true">
+							Individual y estatal
 					    </a>
 					  </li>
 					  <li class="nav-item">
-					    <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">
-							El peligro
+					    <a class="nav-link" id="profile-tab2" data-toggle="tab" href="#profile2" role="tab" aria-controls="profile2" aria-selected="false">
+							La competencia
 					    </a>
 					  </li>
 					  <li class="nav-item">
-					    <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">
-							Colectivismo
+					    <a class="nav-link" id="contact-tab2" data-toggle="tab" href="#contact2" role="tab" aria-controls="contact2" aria-selected="false">
+							Hostilidad
 					    </a>
 					  </li>
 					</ul>
 					<div class="tab-content mt-2" id="myTabContent">
-					  <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-						<p>.</p>
+					  <div class="tab-pane fade show active" id="home2" role="tabpanel" aria-labelledby="home-tab2">
+						<p>Todos deseamos tratar nuestros problemas comunes tan racionalmente como sea posible 
+						y así obrar con toda previsión que se nos alcance. En este sentido, todo el que no sea 
+						un fatalista completo es un partidario de la planificación. Extructura, dentro de la cual 
+						las diferentes personas conducirán las diversas actividades, de acuerdo con sus planes 
+						individuales, guiados por su situación, lugar y tiempo. Todo esto con la mayor apertura posible.
+						\n\n Pero no es éste el sentido en que nuestros entusiastas de una sociedad planificada 
+						emplean ahora el término.\n
+						Lo que nuestros planificadores demandan es la dirección centralizada de toda la actividad económica 
+						según un plan único que imponga el uso de los recursos de la sociedad para servir a particulares 
+						fines por una vía determinada.\n\n
+						Tanto el individuo como los planificadores modernos no discuten guiarse por la inteligencia, 
+						actuar con previsión o raciocinio.\n
+						La verdadera disputa descansa acerca de cuál sea la mejor manera de hacerlo.</p>
 					  </div>
-					  <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+					  <div class="tab-pane fade" id="profile2" role="tabpanel" aria-labelledby="profile-tab2">
 						<p>Tal planificación es igualmente útil para lograr lo opuesto, distribuir la renta a alguna
 						élite, la intelectual por ejemplo.\n
 						Los métodos que habríamos de emplear son los mismos que asegurarían una distribución
 						igualitaria.</p>
 					  </div>
-					  <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+					  <div class="tab-pane fade" id="contact2" role="tabpanel" aria-labelledby="contact-tab2">
 						<p>Estos métodos citados son propios del colectivismo, es por ello que el socialismo
 						es una especie de este género.\n
 						La reglamentación de la vida económica pone a los
