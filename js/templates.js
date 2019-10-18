@@ -289,19 +289,19 @@ export function setPost(id) {
 				<div class="col-sm">
 					<ul class="nav nav-tabs" id="myTab" role="tablist">
 					  <li class="nav-item">
-					    <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">
+					    <div style="cursor: pointer;" class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">
 							Quienes impulsan?
-					    </a>
+					    </div>
 					  </li>
 					  <li class="nav-item">
-					    <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">
+					    <div style="cursor: pointer;" class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">
 							El peligro
-					    </a>
+					    </div>
 					  </li>
 					  <li class="nav-item">
-					    <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">
+					    <div style="cursor: pointer;" class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">
 							Colectivismo
-					    </a>
+					    </div>
 					  </li>
 					</ul>
 					<div class="tab-content mt-2" id="myTabContent">
@@ -311,13 +311,13 @@ export function setPost(id) {
 					  </div>
 					  <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
 						<p>Tal planificación es igualmente útil para lograr lo opuesto, distribuir la renta a alguna
-						élite, la intelectual por ejemplo.\n
+						élite, la intelectual por ejemplo.<br>
 						Los métodos que habríamos de emplear son los mismos que asegurarían una distribución
 						igualitaria.</p>
 					  </div>
 					  <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
 						<p>Estos métodos citados son propios del colectivismo, es por ello que el socialismo
-						es una especie de este género.\n
+						es una especie de este género.<br>
 						La reglamentación de la vida económica pone a los
 						gobiernos en tal posición que, en palabras de Adan Smith, "para sostenerse, 
 						se veían obligados a ser opresores y tiránicos."</p>
@@ -336,19 +336,19 @@ export function setPost(id) {
 				<div class="col-sm">
 					<ul class="nav nav-tabs" id="myTab2" role="tablist">
 					  <li class="nav-item">
-					    <a class="nav-link active" id="home-tab2" data-toggle="tab" href="#home2" role="tab" aria-controls="home2" aria-selected="true">
+					    <div style="cursor: pointer;" class="nav-link active" id="home-tab2" data-toggle="tab" href="#home2" role="tab" aria-controls="home2" aria-selected="true">
 							Individual y estatal
-					    </a>
+					    </div>
 					  </li>
 					  <li class="nav-item">
-					    <a class="nav-link" id="profile-tab2" data-toggle="tab" href="#profile2" role="tab" aria-controls="profile2" aria-selected="false">
+					    <div style="cursor: pointer;" class="nav-link" id="profile-tab2" data-toggle="tab" href="#profile2" role="tab" aria-controls="profile2" aria-selected="false">
 							La competencia
-					    </a>
+					    </div>
 					  </li>
 					  <li class="nav-item">
-					    <a class="nav-link" id="contact-tab2" data-toggle="tab" href="#contact2" role="tab" aria-controls="contact2" aria-selected="false">
+					    <div style="cursor: pointer;" class="nav-link" id="contact-tab2" data-toggle="tab" href="#contact2" role="tab" aria-controls="contact2" aria-selected="false">
 							Hostilidad
-					    </a>
+					    </div>
 					  </li>
 					</ul>
 					<div class="tab-content mt-2" id="myTabContent">
@@ -358,20 +358,26 @@ export function setPost(id) {
 						un fatalista completo es un partidario de la planificación. Extructura, dentro de la cual 
 						las diferentes personas conducirán las diversas actividades, de acuerdo con sus planes 
 						individuales, guiados por su situación, lugar y tiempo. Todo esto con la mayor apertura posible.
-						\n\n Pero no es éste el sentido en que nuestros entusiastas de una sociedad planificada 
-						emplean ahora el término.\n
+						<br><br> Pero no es éste el sentido en que nuestros entusiastas de una sociedad planificada 
+						emplean ahora el término.<br>
 						Lo que nuestros planificadores demandan es la dirección centralizada de toda la actividad económica 
 						según un plan único que imponga el uso de los recursos de la sociedad para servir a particulares 
-						fines por una vía determinada.\n\n
-						Tanto el individuo como los planificadores modernos no discuten guiarse por la inteligencia, 
-						actuar con previsión o raciocinio.\n
-						La verdadera disputa descansa acerca de cuál sea la mejor manera de hacerlo.</p>
+						fines por una vía determinada.<br></p>
+						<ul>
+							<li>Tanto el individuo como los planificadores modernos no discuten guiarse por la inteligencia, actuar con previsión o raciocinio.</li>
+							<li>La verdadera disputa descansa acerca de cuál sea la mejor manera de hacerlo.</li>
+							<li>Cuestionan la utilización optima de los recursos y plantean como solución la dirección y organización centralizada de todas nuestras actividades, de acuerdo con algún "modelo" construido expresamente</li>
+						</ul>
 					  </div>
 					  <div class="tab-pane fade" id="profile2" role="tabpanel" aria-labelledby="profile-tab2">
-						<p>Tal planificación es igualmente útil para lograr lo opuesto, distribuir la renta a alguna
-						élite, la intelectual por ejemplo.\n
-						Los métodos que habríamos de emplear son los mismos que asegurarían una distribución
-						igualitaria.</p>
+						<p>El individualismo defiende el mejor uso posible de las fuerzas de la competencia como medio
+						para coordinar los exfuerzos humanos.<br></p>
+						<ul>
+							<li>Allí donde pueda crearse una competencia efectiva, ésta es la mejor guía para conducirlos exfuerzos individuales.</li>
+							<li>La competencia es el único método que permite a nuestras actividades ajustarse a las de cada uno de los demás sin intervención coercitiva o arbitraria de la "autoridad".</li>
+							<li>Un mercado competitivo evita la necesidad de un "control social explicito" y da a los individuos una oportunidad para decidir si las perspectivas de una ocupación particular son suficientes para compensar las desventajas y los riesgos que llevan consigo.</li>
+						</ul>
+						<p>Es esencial que todas las partes </p>
 					  </div>
 					  <div class="tab-pane fade" id="contact2" role="tabpanel" aria-labelledby="contact-tab2">
 						<p>Estos métodos citados son propios del colectivismo, es por ello que el socialismo
