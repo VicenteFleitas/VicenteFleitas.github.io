@@ -321,7 +321,7 @@ export function setPost(id) {
 						La reglamentación de la vida económica pone a los
 						gobiernos en tal posición que, en palabras de Adan Smith, "para sostenerse, 
 						se veían obligados a ser opresores y tiránicos."</p>
-						<p>Colectivismo: planificación en pos de cualquier ideal dsitributivo determinado.</p>
+						<p>Colectivismo: planificación en pos de cualquier ideal distributivo determinado.</p>
 					  </div>
 					</div>
 				</div>
@@ -373,25 +373,62 @@ export function setPost(id) {
 						<p>El individualismo defiende el mejor uso posible de las fuerzas de la competencia como medio
 						para coordinar los exfuerzos humanos.<br></p>
 						<ul>
-							<li>Allí donde pueda crearse una competencia efectiva, ésta es la mejor guía para conducirlos exfuerzos individuales.</li>
+							<li>Allí donde pueda crearse una competencia efectiva, ésta es la mejor guía para conducir los esfuerzos individuales.</li>
 							<li>La competencia es el único método que permite a nuestras actividades ajustarse a las de cada uno de los demás sin intervención coercitiva o arbitraria de la "autoridad".</li>
 							<li>Un mercado competitivo evita la necesidad de un "control social explicito" y da a los individuos una oportunidad para decidir si las perspectivas de una ocupación particular son suficientes para compensar las desventajas y los riesgos que llevan consigo.</li>
 						</ul>
-						<p>Es esencial que todas las partes </p>
+						<p>Es esencial que todas las partes presentes en el mercado tengan libertad para vender
+						y comprar cualquier cosa que se pueda producir o vender.<br>Y es necesario que el acceso 
+						a las diferentes actividades esté abierto a todos en los mismos términos y que la ley
+						no tolere ningún intento de individuos o de grupos para restringir este acceso mediante
+						poderes abiertos o disfrazados.<br>Cualquier intento de intervenir los precios o las cantidades
+						de unas mercancías en particular priva a la competencia de su facultad para realizar una efectiva
+						coordinación de los esfuerzos individuales, porque las variaciones de los precios dejan de 
+						registrar todas las alteraciones importantes de las circunstancias y no suministran ya una guía
+						eficaz para la acción del individuo.<br>El funcionamiento de la competencia no solo exige
+						una adecuada organización de ciertas institutciones (generadas de forma evolutiva y
+						 auto mantenidas por su capacidad incremental de supervivencia a los pueblos que lo acuñen;
+						 no impuestas por el racionalismo constructivista) como el dinero, los mercados y canales
+						 de información, la ley, etc.</p>
 					  </div>
 					  <div class="tab-pane fade" id="contact2" role="tabpanel" aria-labelledby="contact-tab2">
-						<p>Estos métodos citados son propios del colectivismo, es por ello que el socialismo
-						es una especie de este género.\n
-						La reglamentación de la vida económica pone a los
-						gobiernos en tal posición que, en palabras de Adan Smith, "para sostenerse, 
-						se veían obligados a ser opresores y tiránicos."</p>
-						<p>Colectivismo: planificación en pos de cualquier ideal dsitributivo determinado.</p>
+						<p>No es suficiente que la ley reconozca el principio de la propiedad privada y 
+						de la libertad de contrato; mucho depende de la definición precisa del derecho de 
+						propiedad, las serias deficiencias en este campo, especialmente con respecto a las
+						leyes, no sólo han restado eficacia a la competencia, sino que lo llevan a la destrucción.<br><br>
+						El moderno movimiento en favor de la planificación es un movimiento contra la competencia cómo tal, 
+						una nueva bandera bajo la cual se han alistado todos los enemigos de la competencia.<br>
+						Lo que en realidad une a los socialistas de la izquierda y la derecha es esta común hostilidad
+						a la competencia y su común deseo de reemplazarla por una economía dirigida.<br>
+						El sistema de "economía planificada" como política pone al consumidor a merced de la acción 
+						monopolista conjunta del sistema mercantilista, generado por el estado, y los trabajadores 
+						de las industrias mejor organizadas (Lobby). Así estos monopolios industriales traen efectos 
+						opuestos a los que proclaman los argumentos en favor de la planificación.</p>
 					  </div>
 					</div>
 				</div>
 				<div class="col-sm">
 					<img src="img/individualismoVsColect.jpg" class="img-fluid" alt="Responsive image">
 				</div>
+			</div>
+			<div class="row">
+				<h4>Conclusión<hr></h4>
+			</div>
+			<div class="row">
+				<p>Una vez iluminada la optica contraproducente de la "planificación moderna". Muchos aún 
+				creen posible encontrar una "vía intermedia" entre la competencia "atomística" y 
+				la dirección centralizada.<br>
+				Un error común llega de la mano de intelectuales racionalistas: "nuestro objetivo no debe 
+				ser ni la descentralización extrema de la libre competencia ni la centralización completa 
+				de un plan único, sino una prudente mezcla de los 2 métodos."<br><br>
+				Aunque la competencia puede soportar cierta mezcla de intervención, no puede combinarse
+				con la planificación en cualquier grado si ha de seguir operando como guía eficaz de la
+				actividad productiva.<br><br>
+				La competencia, a medida que se ve interrumpida con pequeñas dosis de dirección centralizada,
+				se empobrece y vuelve ineficiente.<br>
+				Competencia y "dirección centralizada" son principios alternativos para la resolución del mismo
+				problema, y una mezcla de los 2 significa que ninguno operará verdaderamente, y el resultado será
+				peor que si se hubiese confiado sólo en uno de ambos sistemas.</p>
 			</div>`;
 }
 

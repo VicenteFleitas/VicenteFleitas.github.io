@@ -34,4 +34,5 @@ function redirect() {
 	if (a == "individualismoVsColectivismo") {
 		body.innerHTML = setPost(0);
 	}
+	
 }
